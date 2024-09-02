@@ -1,0 +1,21 @@
+[package]
+name = "containerd-shim-wamr"
+version = "0.5.0"
+edition = "2021"
+
+[dependencies]
+libcontainer = "0.4.0"
+anyhow = "1.0.86"
+containerd-shim = "0.7.1"
+log = "0.4.22"
+env_logger = "0.11.5"
+ttrpc = "0.8.1"
+sha256 = "1.5.0"
+wamr_runtime_wrapper = { path = "/home/cap_gk/wamr_project/wamr_runtime_wrapper" }
+
+[dev-dependencies]
+serial_test = "3.1.1"
+
+[[bin]]
+name = "containerd-shim-wamr-v1"
+path = "src/main.rs"
